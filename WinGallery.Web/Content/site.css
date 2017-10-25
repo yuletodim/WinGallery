@@ -1,0 +1,95 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+    background: #eef1f5;
+    color: #666;
+}
+
+.orange-bright{
+    background-color: #ff3838;
+}
+
+.orange-dark{
+    background-color: #ff7342;
+}
+
+.orange-light{
+    background-color: #ffa160;
+}
+
+.yellow-dark{
+    background-color: #ffc173;
+}
+
+.yellow-light{
+    background-color: #ffd47f;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+footer{
+    color: white;
+    margin-top: 15px;
+}
+
+.navbar-brand{
+    margin: 0 0 0 -15px;
+    padding: 7px 0 0 0;
+    text-align: left;
+}
+
+.panel-contest {
+  border-color: #ffa160;
+}
+.panel-contest > .panel-heading {
+  color: #666;
+  background-color: #ffc173;
+  border-color: #ffa160;
+}
+.panel-contest > .panel-heading + .panel-collapse > .panel-body {
+  border-top-color: #ffa160;
+}
+.panel-contest > .panel-heading .badge {
+  color: #ffc173;
+  background-color: #468847;
+}
+.panel-contest > .panel-footer + .panel-collapse > .panel-body {
+  border-bottom-color: #ffa160;
+}
+
+.toast-top-center {  
+    top: 150px; 
+} 
+@media all and (max-width: 240px) { 
+    .toast-top-center { 
+        top: 50px;
+    } 
+} 
+@media all and (min-width: 241px) and (max-width: 320px) { 
+    .toast-top-center { 
+        top: 75px;
+    } 
+} 
+@media all and (min-width: 321px) and (max-width: 480px) { 
+    .toast-top-center { 
+        top: 100px;
+    } 
+}

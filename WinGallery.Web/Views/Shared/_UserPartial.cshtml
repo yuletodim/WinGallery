@@ -1,0 +1,15 @@
+﻿@model WinGallery.Web.Models.UserViewModel
+
+<div class="panel panel-success">
+    <div class="panel-heading">
+        <h3 class="panel-title">@Model.UserName</h3>
+    </div>
+    <div class="panel-body">
+        <p>@Model.FirstName @Model.LastName</p>
+        <div>
+            <p>Email: @Model.Email</p>
+            <p>Phone Number: @Model.PhoneNumber</p>
+            <a class="btn btn-primary btn">ViewMore...</a>
+        </div>
+    </div>
+</div>

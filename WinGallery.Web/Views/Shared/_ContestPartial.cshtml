@@ -1,0 +1,22 @@
+﻿@model WinGallery.Services.Models.ContestModel
+
+<div class="panel panel-contest">
+    <div class="panel-heading">
+        <h3 class="panel-title">@Model.Title</h3>
+    </div>
+    <div class="panel-body">
+        <div class="row">
+            <div class="col-md-8">
+                <img class="most-popular-img" src="@Model.MostVotedPicture.PictureUrl" alt="ContestMainPic" style="width:inherit"/>
+            </div>
+            <div class="col-md-4">
+                <p>@Model.Description</p>
+                <p>Participation strategy: @Model.ParticipationStrategyName</p>
+                <p>Reward strategy: @Model.RewardStrategyName</p>
+                <p>Voting strategy: @Model.VotingStrategyName</p>
+                <p>Deadline strategy: @Model.DeadlineStrategyName</p>
+                <a href="/Contests/View/@Model.ID" class="btn btn-primary btn" style="float:right">Go to gallery...</a>
+            </div>
+        </div>
+    </div>
+</div>
