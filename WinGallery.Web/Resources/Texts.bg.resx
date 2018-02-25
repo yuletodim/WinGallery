@@ -117,11 +117,41 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="ActiveContests" xml:space="preserve">
+    <value>Активни конкурси</value>
+  </data>
+  <data name="Add" xml:space="preserve">
+    <value>Добави</value>
+  </data>
+  <data name="AddContest" xml:space="preserve">
+    <value>Добави състезание</value>
+  </data>
+  <data name="AddRewardStrategy" xml:space="preserve">
+    <value>Добави нова наградна стратегия</value>
+  </data>
+  <data name="Administration" xml:space="preserve">
+    <value>Администрация</value>
+  </data>
+  <data name="AllContests" xml:space="preserve">
+    <value>Всички състезания</value>
+  </data>
+  <data name="AllRewardStrategies" xml:space="preserve">
+    <value>Всички наградни стратегии</value>
+  </data>
   <data name="Bulgarian" xml:space="preserve">
     <value>Български</value>
   </data>
   <data name="ConfirmPasswordMatch" xml:space="preserve">
     <value>Паролата и потвърдената парола не съвпадат.</value>
+  </data>
+  <data name="ContestsCount" xml:space="preserve">
+    <value>Брой конкурси</value>
+  </data>
+  <data name="CreatedOn" xml:space="preserve">
+    <value>Добавено на</value>
+  </data>
+  <data name="Description" xml:space="preserve">
+    <value>Описание</value>
   </data>
   <data name="DuplicateEmail" xml:space="preserve">
     <value>Този имейл вече съществува в системата: </value>
@@ -144,6 +174,27 @@
   <data name="Language" xml:space="preserve">
     <value>Език</value>
   </data>
+  <data name="LastContests" xml:space="preserve">
+    <value>Последни конкурси</value>
+  </data>
+  <data name="Login" xml:space="preserve">
+    <value>Вход</value>
+  </data>
+  <data name="LogOff" xml:space="preserve">
+    <value>Изход</value>
+  </data>
+  <data name="ManageAcount" xml:space="preserve">
+    <value>Управление на акаунта</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>Наименование</value>
+  </data>
+  <data name="NumberOfPrizes" xml:space="preserve">
+    <value>Брой награди</value>
+  </data>
+  <data name="Register" xml:space="preserve">
+    <value>Регистрация</value>
+  </data>
   <data name="Required" xml:space="preserve">
     <value>Това поле е задължително.</value>
   </data>
@@ -156,7 +207,34 @@
   <data name="Spanish" xml:space="preserve">
     <value>Испански</value>
   </data>
+  <data name="User" xml:space="preserve">
+    <value>Потребител</value>
+  </data>
   <data name="Username" xml:space="preserve">
     <value>Потребителско име</value>
+  </data>
+  <data name="Users" xml:space="preserve">
+    <value>Потребители</value>
+  </data>
+  <data name="Deadline" xml:space="preserve">
+    <value>Краен срок</value>
+  </data>
+  <data name="DeadlineStrategy" xml:space="preserve">
+    <value>Стратегия за краен срок</value>
+  </data>
+  <data name="NumberOfParticipants" xml:space="preserve">
+    <value>Брой участници</value>
+  </data>
+  <data name="ParticipationStrategy" xml:space="preserve">
+    <value>Стратегия за участие</value>
+  </data>
+  <data name="RewardStrategy" xml:space="preserve">
+    <value>Наградна стртаегия</value>
+  </data>
+  <data name="Title" xml:space="preserve">
+    <value>Заглавие</value>
+  </data>
+  <data name="VotingStrategy" xml:space="preserve">
+    <value>Стратегия за гласуване</value>
   </data>
 </root>

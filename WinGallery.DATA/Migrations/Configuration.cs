@@ -1,11 +1,15 @@
 namespace WinGallery.DATA.Migrations
 {
+    using System;
     using System.Data.Entity.Migrations;
     using System.Linq;
     using Microsoft.AspNet.Identity;
     using Microsoft.AspNet.Identity.EntityFramework;
+    using WinGallery.DATA.Common;
+    using System.Threading.Tasks;
+    using WinGallery.DATA.Models;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<WinGallery.DATA.ApplicationDbContext>
+    internal sealed class Configuration : DbMigrationsConfiguration<WinGalleryContext>
     {
         public Configuration()
         {
@@ -13,37 +17,65 @@ namespace WinGallery.DATA.Migrations
             ContextKey = "WinGallery.DATA.ApplicationDbContext";
         }
 
-        protected override void Seed(WinGallery.DATA.ApplicationDbContext context)
+        protected override void Seed(WinGallery.DATA.WinGalleryContext context)
         {
-            //  You can use the DbSet<T>.AddOrUpdate() helper extension method 
             if (!context.Roles.Any())
             {
-                const string GuestRole = "Guest";
-                const string UserRole = "User";
-                const string ModeratorRole = "Moderator";
-                const string AdminRole = "Admin";
-
-                var roleStore = new RoleStore<IdentityRole>();
-                var roleManager = new RoleManager<IdentityRole>(roleStore);
-
-                roleManager.Create(new IdentityRole(GuestRole));
-                roleManager.Create(new IdentityRole(UserRole));
-                roleManager.Create(new IdentityRole(ModeratorRole));
-                roleManager.Create(new IdentityRole(AdminRole));
+                this.SeedRoles();
             }
 
-            //  This method will be called after migrating to the latest version.
+            if (!context.Users.Any())
+            {
+                this.SeedAdmin(context);
+            }
+        }
 
-            //  You can use the DbSet<T>.AddOrUpdate() helper extension method 
-            //  to avoid creating duplicate seed data. E.g.
-            //
-            //    context.People.AddOrUpdate(
-            //      p => p.FullName,
-            //      new Person { FullName = "Andrew Peters" },
-            //      new Person { FullName = "Brice Lambson" },
-            //      new Person { FullName = "Rowan Miller" }
-            //    );
-            //
+        private void SeedRoles()
+        {
+            var roles = new string[] 
+            {
+                DataConstants.AdminRole,
+                DataConstants.ModeratorRole
+            };
+
+            var roleStore = new RoleStore<IdentityRole>();
+            var roleManager = new RoleManager<IdentityRole>(roleStore);
+
+            Task.Run(async () =>
+            {
+                foreach (var role in roles)
+                {
+                    await roleManager.CreateAsync(new IdentityRole(role));
+                }
+            })
+            .GetAwaiter()
+            .GetResult();
+        }
+
+        private void SeedAdmin(WinGalleryContext context)
+        {
+            var userStore = new UserStore<User>(context);
+            var userManager = new UserManager<User>(userStore);
+
+            var adminUser = new User
+            {
+                Email = "admin@mysite.com",
+                UserName = "Yulia",
+                CreatedOn = DateTime.UtcNow,
+                EmailConfirmed = true
+            };
+
+            Task.Run(async () =>
+            {
+                var result = await userManager.CreateAsync(adminUser, "123asD@");
+
+                if (result.Succeeded)
+                {
+                    await userManager.AddToRoleAsync(adminUser.Id, DataConstants.AdminRole);
+                }
+            })
+            .GetAwaiter()
+            .GetResult();
         }
     }
 }

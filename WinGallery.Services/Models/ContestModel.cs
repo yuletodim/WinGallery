@@ -1,40 +1,40 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Linq.Expressions;
-using AutoMapper;
-using WinGallery.DATA.Models;
-using WinGallery.Services.Mappings;
-
-namespace WinGallery.Services.Models
+﻿namespace WinGallery.Services.Models
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Linq.Expressions;
+    using AutoMapper;
+    using WinGallery.DATA.Models;
+    using WinGallery.Services.Mappings;
+    using System.Linq;
+
     public class ContestModel : IMapFrom<Contest>, IMapTo<Contest>, IHaveCustomMappings
     {
-        public int ID { get; set; }
+        public int Id { get; set; }
 
         public string Title { get; set; }
 
         public string Description { get; set; }
 
-        public int RewardStrategyID { get; set; }
+        public int RewardStrategyId { get; set; }
 
         public string RewardStrategyName { get; set; }
 
-        public int VotingStrategyID { get; set; }
+        public VotingStrategy VotingStrategy { get; set; }
 
-        public string VotingStrategyName { get; set; }
-
-        public int ParticipationStrategyID { get; set; }
-
-        public string ParticipationStrategyName { get; set; }
+        public ParticipationStrategy ParticipationStrategy { get; set; }
 
         public PictureModel MostVotedPicture { get; set; }
 
-        public int DeadlineStrategyID { get; set; }
-
-        public string DeadlineStrategyName { get; set; }
+        public DeadlineStrategy DeadlineStrategy { get; set; }
 
         public virtual IEnumerable<PictureModel> Pictures { get; set; }
+
+        public void CreateMappings(IMapperConfigurationExpression configuration)
+        {
+            configuration.CreateMap<Contest, ContestModel>()
+                .ForMember(c => c.MostVotedPicture, opt => opt.MapFrom(x => x.Pictures.OrderBy(p => p.Votes).FirstOrDefault()));
+        }
 
         public static Expression<Func<Contest, ContestModel>> Map
         {
@@ -42,24 +42,15 @@ namespace WinGallery.Services.Models
             {
                 return c => new ContestModel
                 {
-                    ID = c.ID,
+                    Id = c.Id,
                     Title = c.Title,
                     Description = c.Description,
-                    RewardStrategyID = c.RewardStrategyID,
-                    VotingStrategyID = c.VotingStrategyID,
-                    ParticipationStrategyID = c.ParticipationStrategyID,
-                    DeadlineStrategyID = c.DeadlineStrategyID                  
+                    RewardStrategyId = c.RewardStrategyId,
+                    VotingStrategy = c.VotingStrategy,
+                    ParticipationStrategy = c.ParticipationStrategy,
+                    DeadlineStrategy = c.DeadlineStrategy                  
                 };
             }
-        }
-
-        public void CreateMappings(IMapperConfigurationExpression configuration)
-        {
-            configuration.CreateMap<Contest, ContestModel>()
-                .ForMember(x => x.RewardStrategyName, opt => opt.MapFrom(x => x.RewardStrategy.Name))
-                .ForMember(x => x.VotingStrategyName, opt => opt.MapFrom(x => x.VotingStrategy.Name))
-                .ForMember(x => x.ParticipationStrategyName, opt => opt.MapFrom(x => x.VotingStrategy.Name))
-                .ForMember(x => x.DeadlineStrategyName, opt => opt.MapFrom(x => x.DeadlineStrategy.Name));
         }
     }
 }

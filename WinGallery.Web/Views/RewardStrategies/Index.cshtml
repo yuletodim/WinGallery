@@ -1,0 +1,37 @@
+﻿@model IEnumerable<RewardStrategyModel>
+@{ 
+    ViewBag.Title = Texts.AllRewardStrategies;
+}
+
+<h2>@ViewBag.Title</h2>
+<div class="row">
+    <div class="col-md-8">
+        <table class="table table-bordered table-hover">
+            <thead>
+                <tr>
+                    <th>@Texts.Name</th>
+                    <th>@Texts.Description</th>
+                    <th>@Texts.NumberOfPrizes</th>
+                    <th>@Texts.CreatedOn</th>
+                    <th>@Texts.User</th>
+                    <th>@Texts.ContestsCount</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var strategy in Model)
+                {
+                    <tr>
+                        <td>@strategy.Name</td>
+                        <td>@strategy.Description</td>
+                        <td>@strategy.NumberOfPrizes</td>
+                        <td>@strategy.CreatedOn.ToShortDateString()</td>
+                        <td>@strategy.UserName</td>
+                        <td>@strategy.ContestsCount</td>
+                    </tr>
+                }
+
+            </tbody>
+        </table>
+
+    </div>
+</div>

@@ -22,22 +22,21 @@
 
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-                <li class="active"><a href="#">Last Contests <span class="sr-only">(current)</span></a></li>
-                <li><a href="#">Active Contests</a></li>
+                <li class="active"><a href="/">@Texts.LastContests <span class="sr-only">(current)</span></a></li>
+                <li><a href="/Contests">@Texts.ActiveContests</a></li>
                 @if (this.User.IsInRole(AppConstants.AdminRole) || this.User.IsInRole(AppConstants.ModeratorRole))
                 {
                     <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Management <span class="caret"></span></a>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">@Texts.Administration <span class="caret"></span></a>
                         <ul class="dropdown-menu" role="menu">
-                            <li><a href="#">Action</a></li>
-                            <li><a href="#">Another action</a></li>
-                            <li><a href="#">Something else here</a></li>
+                            <li><a href="/Contests/Archive">@Texts.AllContests</a></li>
+                            <li><a href="/Contests/Add">@Texts.AddContest</a></li>
+                            <li><a href="/RewardStrategies">@Texts.AllRewardStrategies</a></li>
+                            <li><a href="/RewardStrategies/Add">@Texts.AddRewardStrategy</a></li>
                             @if (this.User.IsInRole(AppConstants.AdminRole))
                             {
                                 <li class="divider"></li>
-                                <li><a href="/Users">All users admin</a></li>
-                                <li class="divider"></li>
-                                <li><a href="#">All contests admin</a></li>
+                                <li><a href="/Users">@Texts.Users</a></li>
                             }
                         </ul>
                     </li>
@@ -56,10 +55,9 @@
                     <span class="caret"></span>
                 </a>
                 <ul class="dropdown-menu" id="select-language">
-                    <li>@Html.ActionLink(Texts.English, currentAction, currentController, routeValues: new { language = "en" }, htmlAttributes: null)</li>
-                    <li>@Html.ActionLink(Texts.Bulgarian, currentAction, currentController, routeValues: new { language = "bg" }, htmlAttributes: null)</li>
-                    <li>@Html.ActionLink(Texts.Spanish, currentAction, currentController, routeValues: new { language = "es" }, htmlAttributes: null)</li>
-                    <li>@Html.ActionLink(Texts.Hebrew, currentAction, currentController, routeValues: new { language = "he" }, htmlAttributes: null)</li>
+                    <li><a href="javascript:;" class="set-lang" data-id="en">@Texts.English</a></li>
+                    <li><a href="javascript:;" class="set-lang" data-id="bg">@Texts.Bulgarian</a></li>
+                    <li><a href="javascript:;" class="set-lang" data-id="es">@Texts.Spanish</a></li>
                 </ul>
             </div>
             
@@ -67,4 +65,18 @@
         </div>
     </div>
 </nav>
+
+
+<script>
+    $(document).on('click', '.set-lang', changeLanguage);
+
+    function changeLanguage(ev) {
+        var currentLang = getCookie('lang');
+        var lang = $(ev.target).data('id');
+        if (lang) {
+            setCookie('lang', lang);
+            window.location.reload(true);
+        }
+    }
+</script>
 

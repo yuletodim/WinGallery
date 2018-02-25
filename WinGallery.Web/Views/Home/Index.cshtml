@@ -1,17 +1,15 @@
 ﻿@model IEnumerable<WinGallery.Services.Models.ContestModel>
-@*@model IEnumerable<WinGallery.Web.Models.UserViewModel>*@
 
 @{
     ViewBag.Title = "Home Page";
 }
 
 <div class="row">
-        <h2>Last Contests</h2>
+    <h2>Last Contests</h2>
 
 
-        @foreach (var item in Model)
-        {
-            @Html.Partial("_ContestPartial", item)
-            // @Html.Partial("_UserPartial", item)
-        }
+    @foreach (var item in Model)
+    {
+        @Html.Partial("_ContestPartial", item)
+    }
 </div>

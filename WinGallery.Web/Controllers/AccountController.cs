@@ -13,10 +13,12 @@ using WinGallery.Services.Utils;
 using System;
 using System.Collections.Generic;
 using WinGallery.Web.Resources;
+using WinGallery.Web.Infrastructure.Filters;
 
 namespace WinGallery.Web.Controllers
 {
     [Authorize]
+    [SetLanguage]
     public class AccountController : BaseController
     {
         private ApplicationSignInManager _signInManager;
@@ -182,12 +184,12 @@ namespace WinGallery.Web.Controllers
                 {
                     if(error.StartsWith("Email") && error.EndsWith("is already taken."))
                     {
-                        overrideErrors.Add(string.Format(Texts.DuplicateEmail + model.Email));
+                        overrideErrors.Add(string.Format(Texts.DuplicateEmail, model.Email));
                     }
 
                     if (error.StartsWith("Name") && error.EndsWith("is already taken."))
                     {
-                        overrideErrors.Add(string.Format(Texts.DuplicateName + model.Email));
+                        overrideErrors.Add(string.Format(Texts.DuplicateName, model.Username));
                     }
                 }
 

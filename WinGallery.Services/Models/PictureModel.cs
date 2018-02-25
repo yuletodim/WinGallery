@@ -18,7 +18,7 @@
 
         public  string ContestName { get; set; }
 
-        public int Votes { get; set; }
+        public int? Votes { get; set; }
 
         public void CreateMappings(IMapperConfigurationExpression configuration)
         {

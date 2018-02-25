@@ -1,13 +1,13 @@
 ﻿namespace WinGallery.Web.Controllers
 {
-    using System.Globalization;
-    using System.Threading;
     using System.Web.Mvc;
     using AutoMapper;
     using log4net;
     using Services.Mappings;
     using Services.Utils;
+    using WinGallery.Web.Infrastructure.Filters;
 
+    [SetLanguage]
     public class BaseController : Controller
     {
         protected IMapper Mapper
@@ -24,18 +24,6 @@
             {
                 return AppLogger.logger;
             }
-        }
-
-        protected override void OnActionExecuting(ActionExecutingContext filterContext)
-        {
-            var lang = Request.UserLanguages[0];
-
-            var language = this.Request.RequestContext.RouteData.Values["language"].ToString();
-
-            Thread.CurrentThread.CurrentCulture = CultureInfo.CreateSpecificCulture(language);
-            Thread.CurrentThread.CurrentUICulture = new CultureInfo(language);
-
-            base.OnActionExecuting(filterContext);
         }
 
 #if !DEBUG

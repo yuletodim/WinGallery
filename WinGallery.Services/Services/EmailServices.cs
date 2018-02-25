@@ -13,22 +13,24 @@
         {
             try
             {
-                using (MailMessage mailMessage = new MailMessage())
-                using (SmtpClient smtp = new SmtpClient())
+                using (var mailMessage = new MailMessage())
                 {
                     mailMessage.Subject = emailSubject;
                     mailMessage.Body = emailBody;
-                    mailMessage.IsBodyHtml = false;
+                    mailMessage.IsBodyHtml = true;
                     mailMessage.From = new MailAddress("yuletodim.apps@gmail.com");
                     mailMessage.To.Add(new MailAddress(email));
 
-                    var credentials = new NetworkCredential(Credentials.AppEmail, Credentials.EmailPass);
-                    smtp.UseDefaultCredentials = false;
-                    smtp.Credentials = credentials;
-                    smtp.Host = "smtp.gmail.com";
-                    smtp.EnableSsl = true;
+                    using (SmtpClient smtp = new SmtpClient())
+                    {
+                        var credentials = new NetworkCredential(Credentials.AppEmail, Credentials.EmailPass);
+                        smtp.UseDefaultCredentials = false;
+                        smtp.Credentials = credentials;
+                        smtp.Host = "smtp.gmail.com";
+                        smtp.EnableSsl = true;
 
-                    await smtp.SendMailAsync(mailMessage);
+                        await smtp.SendMailAsync(mailMessage);
+                    }
                 }
             }
             catch (Exception ex)

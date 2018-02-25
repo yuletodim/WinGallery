@@ -19,7 +19,7 @@ namespace WinGallery.Web.Resources {
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     public class Texts {
@@ -61,6 +61,69 @@ namespace WinGallery.Web.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Active Contests.
+        /// </summary>
+        public static string ActiveContests {
+            get {
+                return ResourceManager.GetString("ActiveContests", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Add.
+        /// </summary>
+        public static string Add {
+            get {
+                return ResourceManager.GetString("Add", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Add contest.
+        /// </summary>
+        public static string AddContest {
+            get {
+                return ResourceManager.GetString("AddContest", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Add Reward Strategy.
+        /// </summary>
+        public static string AddRewardStrategy {
+            get {
+                return ResourceManager.GetString("AddRewardStrategy", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Administration.
+        /// </summary>
+        public static string Administration {
+            get {
+                return ResourceManager.GetString("Administration", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to All contests.
+        /// </summary>
+        public static string AllContests {
+            get {
+                return ResourceManager.GetString("AllContests", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to All Reward Strategies.
+        /// </summary>
+        public static string AllRewardStrategies {
+            get {
+                return ResourceManager.GetString("AllRewardStrategies", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Bulgarian.
         /// </summary>
         public static string Bulgarian {
@@ -79,7 +142,52 @@ namespace WinGallery.Web.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Email is already taken:  .
+        ///   Looks up a localized string similar to Contests Count.
+        /// </summary>
+        public static string ContestsCount {
+            get {
+                return ResourceManager.GetString("ContestsCount", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Created On.
+        /// </summary>
+        public static string CreatedOn {
+            get {
+                return ResourceManager.GetString("CreatedOn", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Deadline.
+        /// </summary>
+        public static string Deadline {
+            get {
+                return ResourceManager.GetString("Deadline", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Deadline Strategy.
+        /// </summary>
+        public static string DeadlineStrategy {
+            get {
+                return ResourceManager.GetString("DeadlineStrategy", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Description.
+        /// </summary>
+        public static string Description {
+            get {
+                return ResourceManager.GetString("Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Email {0} is already taken:  .
         /// </summary>
         public static string DuplicateEmail {
             get {
@@ -88,7 +196,7 @@ namespace WinGallery.Web.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Name is already taken: .
+        ///   Looks up a localized string similar to Name {0} is already taken: .
         /// </summary>
         public static string DuplicateName {
             get {
@@ -115,15 +223,6 @@ namespace WinGallery.Web.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Hebrew.
-        /// </summary>
-        public static string Hebrew {
-            get {
-                return ResourceManager.GetString("Hebrew", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Home.
         /// </summary>
         public static string Home {
@@ -138,6 +237,87 @@ namespace WinGallery.Web.Resources {
         public static string Language {
             get {
                 return ResourceManager.GetString("Language", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Last Contests.
+        /// </summary>
+        public static string LastContests {
+            get {
+                return ResourceManager.GetString("LastContests", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Log in.
+        /// </summary>
+        public static string Login {
+            get {
+                return ResourceManager.GetString("Login", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Log off.
+        /// </summary>
+        public static string LogOff {
+            get {
+                return ResourceManager.GetString("LogOff", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Manage acount.
+        /// </summary>
+        public static string ManageAcount {
+            get {
+                return ResourceManager.GetString("ManageAcount", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Name.
+        /// </summary>
+        public static string Name {
+            get {
+                return ResourceManager.GetString("Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Number Of Participants.
+        /// </summary>
+        public static string NumberOfParticipants {
+            get {
+                return ResourceManager.GetString("NumberOfParticipants", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Number Of Prizes.
+        /// </summary>
+        public static string NumberOfPrizes {
+            get {
+                return ResourceManager.GetString("NumberOfPrizes", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Participation Strategy.
+        /// </summary>
+        public static string ParticipationStrategy {
+            get {
+                return ResourceManager.GetString("ParticipationStrategy", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Register.
+        /// </summary>
+        public static string Register {
+            get {
+                return ResourceManager.GetString("Register", resourceCulture);
             }
         }
         
@@ -169,6 +349,15 @@ namespace WinGallery.Web.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Reward Strategy.
+        /// </summary>
+        public static string RewardStrategy {
+            get {
+                return ResourceManager.GetString("RewardStrategy", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Spanish.
         /// </summary>
         public static string Spanish {
@@ -178,11 +367,47 @@ namespace WinGallery.Web.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Title.
+        /// </summary>
+        public static string Title {
+            get {
+                return ResourceManager.GetString("Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to User.
+        /// </summary>
+        public static string User {
+            get {
+                return ResourceManager.GetString("User", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Username.
         /// </summary>
         public static string Username {
             get {
                 return ResourceManager.GetString("Username", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Users.
+        /// </summary>
+        public static string Users {
+            get {
+                return ResourceManager.GetString("Users", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Voting Strategy.
+        /// </summary>
+        public static string VotingStrategy {
+            get {
+                return ResourceManager.GetString("VotingStrategy", resourceCulture);
             }
         }
     }

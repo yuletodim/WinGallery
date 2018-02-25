@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <title>@ViewBag.Title - WinGallery</title>
     <link href="~/Content/bootstrap/bootstrap.min.css" rel="stylesheet" />
     <link href="~/Content/bootstrap/bootstrap-united.css" rel="stylesheet" />
     <link href="~/Content/toastr/toastr.min.css" rel="stylesheet" />
@@ -22,12 +22,14 @@
     <div class="container body-content">
         @RenderBody()
     </div>
+
     @Html.Partial("_FooterPartial")
 
     <script src="~/Scripts/jquery/jquery.validate.min.js"></script>
     <script src="~/Scripts/jquery/jquery.validate.unobtrusive.min.js"></script>
     <script src="~/Scripts/bootstrap/bootstrap.min.js"></script>
     <script src="~/Scripts/toastr/toastr.min.js"></script>
+    <script src="~/Scripts/main.js"></script>
     @RenderSection("Scripts", required: false)
 
     @Html.Partial("_Alerts")

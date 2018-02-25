@@ -117,17 +117,47 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="ActiveContests" xml:space="preserve">
+    <value>Active Contests</value>
+  </data>
+  <data name="Add" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="AddContest" xml:space="preserve">
+    <value>Add contest</value>
+  </data>
+  <data name="AddRewardStrategy" xml:space="preserve">
+    <value>Add Reward Strategy</value>
+  </data>
+  <data name="Administration" xml:space="preserve">
+    <value>Administration</value>
+  </data>
+  <data name="AllContests" xml:space="preserve">
+    <value>All contests</value>
+  </data>
+  <data name="AllRewardStrategies" xml:space="preserve">
+    <value>All Reward Strategies</value>
+  </data>
   <data name="Bulgarian" xml:space="preserve">
     <value>Bulgarian</value>
   </data>
   <data name="ConfirmPasswordMatch" xml:space="preserve">
     <value>The password and confirmation password do not match.</value>
   </data>
+  <data name="ContestsCount" xml:space="preserve">
+    <value>Contests Count</value>
+  </data>
+  <data name="CreatedOn" xml:space="preserve">
+    <value>Created On</value>
+  </data>
+  <data name="Description" xml:space="preserve">
+    <value>Description</value>
+  </data>
   <data name="DuplicateEmail" xml:space="preserve">
-    <value>Email is already taken:  </value>
+    <value>Email {0} is already taken:  </value>
   </data>
   <data name="DuplicateName" xml:space="preserve">
-    <value>Name is already taken: </value>
+    <value>Name {0} is already taken: </value>
   </data>
   <data name="Email" xml:space="preserve">
     <value>Email</value>
@@ -135,14 +165,32 @@
   <data name="English" xml:space="preserve">
     <value>English</value>
   </data>
-  <data name="Hebrew" xml:space="preserve">
-    <value>Hebrew</value>
-  </data>
   <data name="Home" xml:space="preserve">
     <value>Home</value>
   </data>
   <data name="Language" xml:space="preserve">
     <value>Language</value>
+  </data>
+  <data name="LastContests" xml:space="preserve">
+    <value>Last Contests</value>
+  </data>
+  <data name="Login" xml:space="preserve">
+    <value>Log in</value>
+  </data>
+  <data name="LogOff" xml:space="preserve">
+    <value>Log off</value>
+  </data>
+  <data name="ManageAcount" xml:space="preserve">
+    <value>Manage acount</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="NumberOfPrizes" xml:space="preserve">
+    <value>Number Of Prizes</value>
+  </data>
+  <data name="Register" xml:space="preserve">
+    <value>Register</value>
   </data>
   <data name="Required" xml:space="preserve">
     <value>The field is required.</value>
@@ -156,7 +204,34 @@
   <data name="Spanish" xml:space="preserve">
     <value>Spanish</value>
   </data>
+  <data name="User" xml:space="preserve">
+    <value>User</value>
+  </data>
   <data name="Username" xml:space="preserve">
     <value>Username</value>
+  </data>
+  <data name="Users" xml:space="preserve">
+    <value>Users</value>
+  </data>
+  <data name="Deadline" xml:space="preserve">
+    <value>Deadline</value>
+  </data>
+  <data name="DeadlineStrategy" xml:space="preserve">
+    <value>Deadline Strategy</value>
+  </data>
+  <data name="NumberOfParticipants" xml:space="preserve">
+    <value>Number Of Participants</value>
+  </data>
+  <data name="ParticipationStrategy" xml:space="preserve">
+    <value>Participation Strategy</value>
+  </data>
+  <data name="RewardStrategy" xml:space="preserve">
+    <value>Reward Strategy</value>
+  </data>
+  <data name="Title" xml:space="preserve">
+    <value>Title</value>
+  </data>
+  <data name="VotingStrategy" xml:space="preserve">
+    <value>Voting Strategy</value>
   </data>
 </root>

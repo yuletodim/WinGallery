@@ -1,7 +1,7 @@
 ﻿(function () {
     $(window).load(function () {
         setActivePicture();
-        $(document).on('click', '.thumb', loadPicture())
+        $(document).on('click', '.thumb', loadPicture());
     })
 
     function setActivePicture() {
@@ -18,5 +18,4 @@
     //    $(this).addClass('active');
     //    var urlPicture = $(this).attr('src');
     //}
-}
-)();
+})();

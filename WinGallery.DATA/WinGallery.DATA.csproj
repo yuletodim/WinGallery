@@ -57,7 +57,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ApplicationDbContext.cs" />
+    <Compile Include="WinGalleryContext.cs" />
+    <Compile Include="Common\DataConstants.cs" />
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\CommonLogic\BaseModel.cs" />
     <Compile Include="Models\CommonLogic\IAuditInfo.cs" />

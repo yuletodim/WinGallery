@@ -49,7 +49,7 @@ namespace WinGallery.Web.App_Start
         private static void RegisterServices(ContainerBuilder builder)
         {
             // DbContext
-            builder.Register(x => new ApplicationDbContext())
+            builder.Register(x => new WinGalleryContext())
                 .As<DbContext>()
                 .InstancePerRequest();
 

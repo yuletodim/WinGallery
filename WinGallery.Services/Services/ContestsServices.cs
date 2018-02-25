@@ -2,14 +2,14 @@
 {
     using System.Collections.Generic;
     using System.Linq;
-    using AutoMapper;
     using AutoMapper.QueryableExtensions;
     using WinGallery.DATA.Models;
     using WinGallery.DATA.Repositories;
     using WinGallery.Services.Interfaces;
-    using Mappings;
     using Models;
-    using Services;
+    using System.Data.Entity;
+    using System.Threading.Tasks;
+    using WinGallery.Services.Mappings;
 
     public class ContestsServices : BaseServices, IContestsServices
     {
@@ -24,22 +24,22 @@
         {
             var contests = this.contestsRepository
                 .GetAll()
-                .ProjectTo<ContestModel>(AutoMapperConfig.Configuration)
+                .To<ContestModel>()
                 .ToList();
-
-            foreach (var contest in contests)
-            {
-                var pic = contest.Pictures.OrderByDescending(x => x.Votes).FirstOrDefault();
-                contest.MostVotedPicture = pic;
-            }
 
             return contests;
         }
 
-        public ContestModel GetById(int id)
+        public async Task<ContestModel> GetById(int id)
         {
             var contest = this.contestsRepository.Find(id);
             var contestModel = this.Mapper.Map<ContestModel>(contest);
+
+            var model = await this.contestsRepository
+                .GetAll()
+                .Where(contestsRepository => contestsRepository.Id == id)
+                .ProjectTo<ContestModel>()
+                .FirstOrDefaultAsync();
 
             return contestModel;
         }

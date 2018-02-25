@@ -1,13 +1,13 @@
 ﻿namespace WinGallery.Services.Interfaces
 {
     using System.Collections.Generic;
-    using DATA.Models;
     using Models;
+    using System.Threading.Tasks;
 
     public interface IContestsServices
     {
         IEnumerable<ContestModel> GetAll();
 
-        ContestModel GetById(int id);
+        Task<ContestModel> GetById(int id);
     }
 }

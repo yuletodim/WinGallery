@@ -6,6 +6,8 @@
     using CommonLogic;
     using Microsoft.AspNet.Identity;
     using Microsoft.AspNet.Identity.EntityFramework;
+    using System.Collections.Generic;
+    using System.ComponentModel.DataAnnotations;
 
     public class User : IdentityUser, IAuditInfo, IDeletableEntity
     {
@@ -13,6 +15,7 @@
 
         public string LastName { get; set; }
 
+        [Required]
         public DateTime CreatedOn { get; set; }
 
         public DateTime? DeletedOn { get; set; }       
@@ -20,6 +23,12 @@
         public bool IsDeleted { get; set; }
 
         public DateTime? ModifiedOn { get; set; }
+
+        public ICollection<Picture> Pictures { get; set; } = new HashSet<Picture>();
+
+        public ICollection<Contest> Contests { get; set; } = new HashSet<Contest>();
+
+        public ICollection<RewardStrategy> RewardStrategys { get; set; } = new HashSet<RewardStrategy>();
 
         public async Task<ClaimsIdentity> GenerateUserIdentityAsync(UserManager<User> manager)
         {

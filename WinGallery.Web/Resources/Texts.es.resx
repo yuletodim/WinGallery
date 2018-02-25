@@ -117,17 +117,47 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="ActiveContests" xml:space="preserve">
+    <value>Concursos activos</value>
+  </data>
+  <data name="Add" xml:space="preserve">
+    <value>Añadir</value>
+  </data>
+  <data name="AddContest" xml:space="preserve">
+    <value>Añadir competación</value>
+  </data>
+  <data name="AddRewardStrategy" xml:space="preserve">
+    <value>Añadir nueva estrategia de premiar</value>
+  </data>
+  <data name="Administration" xml:space="preserve">
+    <value>Administración</value>
+  </data>
+  <data name="AllContests" xml:space="preserve">
+    <value>Todas competaciones</value>
+  </data>
+  <data name="AllRewardStrategies" xml:space="preserve">
+    <value>Todas estrategias para premiar</value>
+  </data>
   <data name="Bulgarian" xml:space="preserve">
     <value>Bulgaro</value>
   </data>
   <data name="ConfirmPasswordMatch" xml:space="preserve">
     <value>La contraseña y la contraseña de confirmación no coinciden.</value>
   </data>
+  <data name="ContestsCount" xml:space="preserve">
+    <value>Número de concursos</value>
+  </data>
+  <data name="CreatedOn" xml:space="preserve">
+    <value>Аñadida en</value>
+  </data>
+  <data name="Description" xml:space="preserve">
+    <value>Descripción</value>
+  </data>
   <data name="DuplicateEmail" xml:space="preserve">
-    <value>Email ya existe: </value>
+    <value>Email {0} ya existe;</value>
   </data>
   <data name="DuplicateName" xml:space="preserve">
-    <value>Usario con nombre ya existe: </value>
+    <value>Usario con nombre {0} ya existe;</value>
   </data>
   <data name="Email" xml:space="preserve">
     <value>Email</value>
@@ -144,6 +174,27 @@
   <data name="Language" xml:space="preserve">
     <value>Idioma</value>
   </data>
+  <data name="LastContests" xml:space="preserve">
+    <value>Ultimos concursos</value>
+  </data>
+  <data name="Login" xml:space="preserve">
+    <value>Entrar</value>
+  </data>
+  <data name="LogOff" xml:space="preserve">
+    <value>Salir</value>
+  </data>
+  <data name="ManageAcount" xml:space="preserve">
+    <value>Manejar cuenta</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>Nombre</value>
+  </data>
+  <data name="NumberOfPrizes" xml:space="preserve">
+    <value>Número de premios</value>
+  </data>
+  <data name="Register" xml:space="preserve">
+    <value>Registrar</value>
+  </data>
   <data name="Required" xml:space="preserve">
     <value>Este campo es obligatorio.</value>
   </data>
@@ -154,9 +205,36 @@
     <value>Contraseña es obligatoria.</value>
   </data>
   <data name="Spanish" xml:space="preserve">
-    <value>Espanol</value>
+    <value>Español</value>
+  </data>
+  <data name="User" xml:space="preserve">
+    <value>Usario</value>
   </data>
   <data name="Username" xml:space="preserve">
     <value>Nombre de usario</value>
+  </data>
+  <data name="Users" xml:space="preserve">
+    <value>Usarios</value>
+  </data>
+  <data name="Deadline" xml:space="preserve">
+    <value>Fecha tope</value>
+  </data>
+  <data name="DeadlineStrategy" xml:space="preserve">
+    <value>Estrategia de fecha límite</value>
+  </data>
+  <data name="NumberOfParticipants" xml:space="preserve">
+    <value>Número de participantes</value>
+  </data>
+  <data name="ParticipationStrategy" xml:space="preserve">
+    <value>Estrategia de participación</value>
+  </data>
+  <data name="RewardStrategy" xml:space="preserve">
+    <value>Estrategia de premiar</value>
+  </data>
+  <data name="Title" xml:space="preserve">
+    <value>Titulo</value>
+  </data>
+  <data name="VotingStrategy" xml:space="preserve">
+    <value>Estrategia de votación</value>
   </data>
 </root>

@@ -7,10 +7,12 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using WinGallery.Web.Models;
+using WinGallery.Web.Infrastructure.Filters;
 
 namespace WinGallery.Web.Controllers
 {
     [Authorize]
+    [SetLanguage]
     public class ManageController : Controller
     {
         private ApplicationSignInManager _signInManager;

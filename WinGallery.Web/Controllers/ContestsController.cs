@@ -1,14 +1,12 @@
 ﻿namespace WinGallery.Web.Controllers
 {
-    using System;
-    using System.Collections.Generic;
-    using System.Linq;
-    using System.Web;
-    using System.Web.Mvc;
     using Models;
     using Services.Interfaces;
-    using Services.Services;
+    using System.Web.Mvc;
+    using WinGallery.Web.Models.Contests;
+    using System;
 
+    [Authorize]
     public class ContestsController : BaseController
     {
         private readonly IContestsServices contestServices;
@@ -18,6 +16,11 @@
             this.contestServices = contestServices;
         }
 
+        public ActionResult Index()
+        {
+            return this.View();
+        }
+
         // GET Contests/View/id
         public ActionResult View(int id)
         {
@@ -25,6 +28,25 @@
             var contestViewModel = this.Mapper.Map<ContestViewModel>(contest);
 
             return this.View(contestViewModel);
+        }
+
+        public ActionResult Add()
+        {
+            var contestModel = this.GetEmtpyModel();
+            return this.View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Add(AddContestBindingModel model)
+        {
+            return this.RedirectToAction(nameof(Index));
+        }
+
+
+        private object GetEmtpyModel()
+        {
+            throw new NotImplementedException();
         }
     }
 }
